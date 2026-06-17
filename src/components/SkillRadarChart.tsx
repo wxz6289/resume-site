@@ -8,6 +8,7 @@ import {
   ResponsiveContainer,
   Tooltip,
 } from "recharts";
+import type { TooltipProps } from "recharts";
 import type { SkillRadar } from "../types";
 
 interface Props {
@@ -15,8 +16,28 @@ interface Props {
   tags: string[];
 }
 
+interface RadarDataPoint {
+  subject: string;
+  score: number;
+  fullMark: number;
+  projects: string;
+}
+
+function RadarTooltip({ active, payload }: TooltipProps<number, string>) {
+  if (!active || !payload?.length) return null;
+  const data = payload[0].payload as RadarDataPoint;
+
+  return (
+    <div className="rounded-lg border border-slate-700 bg-slate-800 px-3 py-2 shadow-lg">
+      <p className="font-medium text-slate-100">{data.subject}</p>
+      <p className="text-sm text-amber-400">{data.score} / 5</p>
+      <p className="mt-1 text-xs text-slate-400">相关项目：{data.projects}</p>
+    </div>
+  );
+}
+
 export function SkillRadarChart({ skills, tags }: Props) {
-  const data = skills.map((s) => ({
+  const data: RadarDataPoint[] = skills.map((s) => ({
     subject: s.subject,
     score: s.score,
     fullMark: 5,
@@ -24,7 +45,7 @@ export function SkillRadarChart({ skills, tags }: Props) {
   }));
 
   return (
-    <section className="px-6 py-16 md:px-12 print-break">
+    <section id="skills" className="scroll-mt-16 px-6 py-16 md:px-12 print-break">
       <motion.h2
         className="mb-8 text-2xl font-bold"
         initial={{ opacity: 0 }}
@@ -48,10 +69,7 @@ export function SkillRadarChart({ skills, tags }: Props) {
                 fill="#4f46e5"
                 fillOpacity={0.4}
               />
-              <Tooltip
-                contentStyle={{ background: "#1e293b", border: "1px solid #334155", borderRadius: 8 }}
-                labelStyle={{ color: "#f1f5f9" }}
-              />
+              <Tooltip content={<RadarTooltip />} />
             </RadarChart>
           </ResponsiveContainer>
         </div>

@@ -1,13 +1,19 @@
-import { motion } from "framer-motion";
-import type { Profile } from "../types";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import type { Profile, ResumeData } from "../types";
 
 interface Props {
   profile: Profile;
+  social: ResumeData["social"];
 }
 
-export function Hero({ profile }: Props) {
-  const copyEmail = () => {
-    navigator.clipboard.writeText(profile.email);
+export function Hero({ profile, social }: Props) {
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = async () => {
+    await navigator.clipboard.writeText(profile.email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   return (
@@ -53,6 +59,16 @@ export function Hero({ profile }: Props) {
           >
             复制邮箱
           </button>
+          {social.github && (
+            <a
+              href={social.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg border border-slate-600 px-5 py-2.5 text-sm font-medium text-slate-300 transition hover:border-indigo-500 hover:text-white"
+            >
+              GitHub
+            </a>
+          )}
           <a
             href={`tel:${profile.phone}`}
             className="rounded-lg border border-slate-600 px-5 py-2.5 text-sm font-medium text-slate-300 transition hover:border-indigo-500 hover:text-white"
@@ -61,6 +77,19 @@ export function Hero({ profile }: Props) {
           </a>
         </div>
       </motion.div>
+
+      <AnimatePresence>
+        {copied && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
+            className="fixed bottom-8 left-1/2 z-50 -translate-x-1/2 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-lg"
+          >
+            邮箱已复制
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

@@ -10,7 +10,7 @@ export function Projects({ projects }: Props) {
   const [expanded, setExpanded] = useState<string | null>(projects[0]?.id ?? null);
 
   return (
-    <section className="bg-slate-900/30 px-6 py-16 md:px-12 print-break">
+    <section id="projects" className="scroll-mt-16 bg-slate-900/30 px-6 py-16 md:px-12 print-break">
       <h2 className="mb-8 text-2xl font-bold">核心项目</h2>
 
       <div className="mx-auto grid max-w-4xl gap-6">

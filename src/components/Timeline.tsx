@@ -23,7 +23,7 @@ export function Timeline({ experience }: Props) {
       : experience.filter((e) => e.tags.includes(filter));
 
   return (
-    <section className="px-6 py-16 md:px-12 print-break">
+    <section id="experience" className="scroll-mt-16 px-6 py-16 md:px-12 print-break">
       <h2 className="mb-6 text-2xl font-bold">工作经历</h2>
 
       <div className="no-print mb-8 flex gap-2">

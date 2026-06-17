@@ -1,3 +1,4 @@
+import { Nav } from "./components/Nav";
 import { Hero } from "./components/Hero";
 import { StatsBar } from "./components/StatsBar";
 import { SkillRadarChart } from "./components/SkillRadarChart";
@@ -9,7 +10,8 @@ import { resume } from "./data/resume";
 export default function App() {
   return (
     <div className="min-h-screen">
-      <Hero profile={resume.profile} />
+      <Nav />
+      <Hero profile={resume.profile} social={resume.social} />
       <StatsBar stats={resume.stats} />
       <SkillRadarChart skills={resume.skills.radar} tags={resume.skills.tags} />
       <Timeline experience={resume.experience} />
