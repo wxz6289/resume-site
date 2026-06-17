@@ -19,7 +19,7 @@ if [[ -z "$TXT" ]]; then
 fi
 echo "✅ DNS TXT: $TXT"
 
-"$ACME" --renew -d "$DOMAIN" --yes-I-know-dns-manual-mode-enough-go-ahead-please --dnssleep 15
+"$ACME" --renew -d "$DOMAIN" --preferred-chain "ISRG Root X1" --yes-I-know-dns-manual-mode-enough-go-ahead-please --dnssleep 15
 
 ACME_DIR="/home/ecs-user/.acme.sh/${DOMAIN}_ecc"
 sudo mkdir -p "$CERT_DIR"
@@ -44,6 +44,7 @@ server {
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
     root /var/www/resume-site;
     index index.html;
+    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
     add_header X-Frame-Options "SAMEORIGIN" always;
     add_header X-Content-Type-Options "nosniff" always;
     location / { try_files $uri $uri/ /index.html; }

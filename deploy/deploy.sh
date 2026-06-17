@@ -29,7 +29,7 @@ ACME="/home/ecs-user/.acme.sh/acme.sh"
 CERT_DIR="/etc/letsencrypt/live/${DOMAIN}"
 
 sudo mkdir -p "$CERT_DIR"
-"$ACME" --issue -d "$DOMAIN" --dns --yes-I-know-dns-manual-mode-enough-go-ahead-please || true
+"$ACME" --issue -d "$DOMAIN" --dns --preferred-chain "ISRG Root X1" --yes-I-know-dns-manual-mode-enough-go-ahead-please || true
 
 if ! sudo test -f "$CERT_DIR/fullchain.pem"; then
   echo ""
