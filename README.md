@@ -28,9 +28,26 @@ npm run preview
 
 ## 部署
 
-### Vercel（推荐）
+### ECS 静态部署（当前使用）
 
-导入本仓库，Vercel 自动读取 `vercel.json`。自定义域名 `resume.wxz.asia` CNAME 指向 `cname.vercel-dns.com`。
+```bash
+bash deploy/deploy.sh          # 构建 + 上传至 8.166.121.81
+```
+
+域名 `resume.wxz.asia` 已解析至 ECS。因阿里云备案限制，**必须启用 HTTPS** 才能外网访问。
+
+**SSL 证书（DNS 验证）：**
+
+1. 获取 TXT 记录值：`ssh ecs-user@8.166.121.81 'bash -s' < deploy/ssl-issue.sh`
+2. 在阿里云 DNS 添加 TXT：主机记录 `_acme-challenge.resume`，值为脚本输出
+3. 签发证书：`ssh ecs-user@8.166.121.81 'bash -s' < deploy/ssl-finish.sh`
+
+### Vercel（备选）
+
+```bash
+vercel login
+npx vercel --prod
+```
 
 ### GitHub Pages
 
