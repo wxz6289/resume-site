@@ -9,21 +9,30 @@ import { resume } from "./data/resume";
 
 export default function App() {
   return (
-    <div className="min-h-screen">
-      <Nav pdf={resume.pdf} />
-      <Hero profile={resume.profile} social={resume.social} pdf={resume.pdf} />
-      <StatsBar stats={resume.stats} />
-      <SkillRadarChart skills={resume.skills.radar} tags={resume.skills.tags} />
-      <Timeline experience={resume.experience} />
-      <Projects projects={resume.projects} />
-      <Contact
-        profile={resume.profile}
-        education={resume.education}
-        social={resume.social}
-      />
-      <footer className="border-t border-slate-800 px-6 py-8 text-center text-xs text-slate-600">
-        © {new Date().getFullYear()} {resume.profile.name} · 最后更新 2026-04
-      </footer>
-    </div>
+    <>
+      <div className="page-bg" aria-hidden />
+      <div className="relative min-h-screen">
+        <Nav pdf={resume.pdf} name={resume.profile.name} />
+        <main>
+          <Hero profile={resume.profile} social={resume.social} pdf={resume.pdf} />
+          <StatsBar stats={resume.stats} />
+          <SkillRadarChart skills={resume.skills.radar} tags={resume.skills.tags} />
+          <Timeline experience={resume.experience} />
+          <Projects projects={resume.projects} />
+          <Contact
+            profile={resume.profile}
+            education={resume.education}
+            social={resume.social}
+          />
+        </main>
+        <footer className="border-t border-white/5 py-10 text-center">
+          <p className="font-mono text-xs tracking-wider text-zinc-600">
+            © {new Date().getFullYear()} {resume.profile.name}
+            <span className="mx-2 text-zinc-800">·</span>
+            Updated 2026.04
+          </p>
+        </footer>
+      </div>
+    </>
   );
 }

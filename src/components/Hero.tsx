@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { fadeUp } from "../lib/motion";
 import type { Profile, ResumeData } from "../types";
 
 interface Props {
@@ -18,77 +19,112 @@ export function Hero({ profile, social, pdf }: Props) {
   };
 
   return (
-    <section className="relative overflow-hidden px-6 py-20 md:px-12 md:py-28">
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-950/50 via-slate-900 to-slate-900" />
-      <div className="absolute top-0 right-0 h-96 w-96 rounded-full bg-indigo-600/10 blur-3xl" />
+    <section className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
+      <div className="section-wrap">
+        <div className="grid items-end gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
+          >
+            <motion.p
+              variants={fadeUp}
+              custom={0}
+              className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs tracking-wide text-zinc-400"
+            >
+              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
+              {profile.intents[0]}
+            </motion.p>
+
+            <motion.h1
+              variants={fadeUp}
+              custom={1}
+              className="mb-4 text-5xl font-semibold tracking-tight md:text-7xl"
+            >
+              <span className="gradient-text">{profile.name}</span>
+            </motion.h1>
+
+            <motion.p
+              variants={fadeUp}
+              custom={2}
+              className="mb-6 text-lg text-zinc-400 md:text-xl"
+            >
+              {profile.title}
+            </motion.p>
+
+            <motion.p
+              variants={fadeUp}
+              custom={3}
+              className="text-base leading-relaxed text-zinc-500 md:text-lg"
+            >
+              {profile.tagline}
+            </motion.p>
+
+            <motion.div
+              variants={fadeUp}
+              custom={4}
+              className="mt-8 flex flex-wrap gap-2"
+            >
+              <span className="chip">{profile.location}</span>
+              <span className="chip">{profile.experienceYears} 年经验</span>
+              <span className="chip">期望 {profile.salary}</span>
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            className="glass glass-hover rounded-2xl p-6 md:p-8"
+          >
+            <p className="text-sm leading-relaxed text-zinc-400 md:text-base">
+              {profile.summary}
+            </p>
+
+            <div className="no-print mt-8 flex flex-wrap gap-3">
+              <a
+                href={pdf.url}
+                download={pdf.filename}
+                className="btn-primary rounded-xl px-5 py-2.5 text-sm font-medium"
+              >
+                下载简历 PDF
+              </a>
+              <button onClick={copyEmail} className="btn-ghost rounded-xl px-5 py-2.5 text-sm font-medium">
+                {copied ? "已复制 ✓" : "复制邮箱"}
+              </button>
+              {social.github && (
+                <a
+                  href={social.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-ghost rounded-xl px-5 py-2.5 text-sm font-medium"
+                >
+                  GitHub
+                </a>
+              )}
+            </div>
+          </motion.div>
+        </div>
+      </div>
 
       <motion.div
-        className="relative mx-auto max-w-4xl"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        <p className="mb-2 text-sm font-medium tracking-widest text-amber-400 uppercase">
-          {profile.intents.join(" / ")}
-        </p>
-        <h1 className="mb-4 text-4xl font-bold tracking-tight md:text-6xl">
-          {profile.name}
-        </h1>
-        <p className="mb-2 text-xl text-indigo-300 md:text-2xl">{profile.title}</p>
-        <p className="mb-8 text-lg text-slate-400">{profile.tagline}</p>
-
-        <div className="mb-8 flex flex-wrap gap-4 text-sm text-slate-300">
-          <span>{profile.location}</span>
-          <span>·</span>
-          <span>{profile.experienceYears} 经验</span>
-          <span>·</span>
-          <span>期望 {profile.salary}</span>
-        </div>
-
-        <p className="mb-10 max-w-2xl leading-relaxed text-slate-400">{profile.summary}</p>
-
-        <div className="flex flex-wrap gap-3 no-print">
-          <a
-            href={pdf.url}
-            download={pdf.filename}
-            className="rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-indigo-500"
-          >
-            下载 PDF
-          </a>
-          <button
-            onClick={copyEmail}
-            className="rounded-lg border border-slate-600 px-5 py-2.5 text-sm font-medium text-slate-300 transition hover:border-indigo-500 hover:text-white"
-          >
-            复制邮箱
-          </button>
-          {social.github && (
-            <a
-              href={social.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-lg border border-slate-600 px-5 py-2.5 text-sm font-medium text-slate-300 transition hover:border-indigo-500 hover:text-white"
-            >
-              GitHub
-            </a>
-          )}
-          <a
-            href={`tel:${profile.phone}`}
-            className="rounded-lg border border-slate-600 px-5 py-2.5 text-sm font-medium text-slate-300 transition hover:border-indigo-500 hover:text-white"
-          >
-            {profile.phone}
-          </a>
-        </div>
-      </motion.div>
+        className="pointer-events-none absolute -top-20 right-0 h-[420px] w-[420px] rounded-full opacity-40"
+        style={{
+          background: "radial-gradient(circle, rgba(139,92,246,0.25) 0%, transparent 70%)",
+        }}
+        animate={{ scale: [1, 1.05, 1], opacity: [0.3, 0.45, 0.3] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
 
       <AnimatePresence>
         {copied && (
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 10 }}
-            className="fixed bottom-8 left-1/2 z-50 -translate-x-1/2 rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-lg"
+            initial={{ opacity: 0, y: 16, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 8, scale: 0.95 }}
+            className="fixed bottom-8 left-1/2 z-50 -translate-x-1/2 rounded-xl bg-zinc-900 px-5 py-2.5 text-sm text-white shadow-2xl ring-1 ring-white/10"
           >
-            邮箱已复制
+            邮箱已复制到剪贴板
           </motion.div>
         )}
       </AnimatePresence>
