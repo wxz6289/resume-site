@@ -5,9 +5,10 @@ import type { Profile, ResumeData } from "../types";
 interface Props {
   profile: Profile;
   social: ResumeData["social"];
+  pdf: ResumeData["pdf"];
 }
 
-export function Hero({ profile, social }: Props) {
+export function Hero({ profile, social, pdf }: Props) {
   const [copied, setCopied] = useState(false);
 
   const copyEmail = async () => {
@@ -47,12 +48,13 @@ export function Hero({ profile, social }: Props) {
         <p className="mb-10 max-w-2xl leading-relaxed text-slate-400">{profile.summary}</p>
 
         <div className="flex flex-wrap gap-3 no-print">
-          <button
-            onClick={() => window.print()}
+          <a
+            href={pdf.url}
+            download={pdf.filename}
             className="rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-indigo-500"
           >
-            导出 PDF
-          </button>
+            下载 PDF
+          </a>
           <button
             onClick={copyEmail}
             className="rounded-lg border border-slate-600 px-5 py-2.5 text-sm font-medium text-slate-300 transition hover:border-indigo-500 hover:text-white"

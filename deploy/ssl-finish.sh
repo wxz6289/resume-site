@@ -21,11 +21,12 @@ echo "✅ DNS TXT: $TXT"
 
 "$ACME" --renew -d "$DOMAIN" --yes-I-know-dns-manual-mode-enough-go-ahead-please --dnssleep 15
 
+ACME_DIR="/home/ecs-user/.acme.sh/${DOMAIN}_ecc"
 sudo mkdir -p "$CERT_DIR"
-"$ACME" --install-cert -d "$DOMAIN" \
-  --key-file "$CERT_DIR/privkey.pem" \
-  --fullchain-file "$CERT_DIR/fullchain.pem" \
-  --reloadcmd "nginx -t && systemctl reload nginx"
+sudo cp "$ACME_DIR/${DOMAIN}.key" "$CERT_DIR/privkey.pem"
+sudo cp "$ACME_DIR/fullchain.cer" "$CERT_DIR/fullchain.pem"
+sudo chmod 600 "$CERT_DIR/privkey.pem"
+sudo chmod 644 "$CERT_DIR/fullchain.pem"
 
 sudo tee "$NGINX_CONF" > /dev/null <<'EOF'
 server {
@@ -52,5 +53,5 @@ EOF
 
 sudo ln -sf "$NGINX_CONF" "/etc/nginx/sites-enabled/${DOMAIN}.conf"
 sudo nginx -t && sudo systemctl reload nginx
-openssl x509 -in "$CERT_DIR/fullchain.pem" -noout -subject -dates
+sudo openssl x509 -in "$CERT_DIR/fullchain.pem" -noout -subject -dates
 echo "✅ https://${DOMAIN} 已启用"

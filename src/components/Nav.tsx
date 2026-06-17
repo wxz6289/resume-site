@@ -1,3 +1,5 @@
+import type { ResumeData } from "../types";
+
 const NAV_ITEMS = [
   { id: "skills", label: "技能" },
   { id: "experience", label: "经历" },
@@ -5,7 +7,7 @@ const NAV_ITEMS = [
   { id: "contact", label: "联系" },
 ];
 
-export function Nav() {
+export function Nav({ pdf }: { pdf: ResumeData["pdf"] }) {
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -30,12 +32,13 @@ export function Nav() {
               {item.label}
             </button>
           ))}
-          <button
-            onClick={() => window.print()}
+          <a
+            href={pdf.url}
+            download={pdf.filename}
             className="ml-1 rounded-lg bg-indigo-600 px-3 py-1.5 text-xs font-medium text-white transition hover:bg-indigo-500 sm:text-sm"
           >
             PDF
-          </button>
+          </a>
         </div>
       </div>
     </nav>

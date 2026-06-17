@@ -10,8 +10,8 @@ import { resume } from "./data/resume";
 export default function App() {
   return (
     <div className="min-h-screen">
-      <Nav />
-      <Hero profile={resume.profile} social={resume.social} />
+      <Nav pdf={resume.pdf} />
+      <Hero profile={resume.profile} social={resume.social} pdf={resume.pdf} />
       <StatsBar stats={resume.stats} />
       <SkillRadarChart skills={resume.skills.radar} tags={resume.skills.tags} />
       <Timeline experience={resume.experience} />
@@ -22,7 +22,7 @@ export default function App() {
         social={resume.social}
       />
       <footer className="border-t border-slate-800 px-6 py-8 text-center text-xs text-slate-600">
-        © {new Date().getFullYear()} {resume.profile.name} · 最后更新 2026-06
+        © {new Date().getFullYear()} {resume.profile.name} · 最后更新 2026-04
       </footer>
     </div>
   );

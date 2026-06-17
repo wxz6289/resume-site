@@ -47,6 +47,7 @@ export interface Project {
 
 export interface ResumeData {
   profile: Profile;
+  pdf: { url: string; filename: string };
   stats: Stat[];
   skills: { radar: SkillRadar[]; tags: string[] };
   experience: Experience[];
