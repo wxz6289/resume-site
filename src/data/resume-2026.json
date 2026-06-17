@@ -1,0 +1,183 @@
+{
+  "profile": {
+    "name": "王显朝",
+    "title": "资深前端工程师 · AI 工程实践者",
+    "tagline": "10 年 B 端前端架构 + 独立全栈产品交付",
+    "phone": "15658001296",
+    "email": "dreamingking@live.cn",
+    "location": "成都",
+    "experienceYears": "10+",
+    "salary": "20-35K",
+    "intents": ["高级前端开发工程师", "前端架构师", "AI 应用工程师"],
+    "summary": "10 年+ 前端开发经验，深耕 React/Vue 生态、微前端架构、数据可视化与工程化。近年来专注 AI 辅助工程与 Spec-Driven 全栈产品交付，具备从 0 到 1 独立上线生产级应用的能力。"
+  },
+  "stats": [
+    { "label": "从业年限", "value": "10+", "unit": "年" },
+    { "label": "核心项目", "value": "6", "unit": "个" },
+    { "label": "技术栈", "value": "3", "unit": "套" },
+    { "label": "生产级 Side Project", "value": "2", "unit": "个" }
+  ],
+  "skills": {
+    "radar": [
+      { "subject": "React 生态", "score": 5, "projects": ["魔筷中后台", "mini-mall", "舆情系统"] },
+      { "subject": "工程化", "score": 5, "projects": ["qiankun 微前端", "CI/CD", "Vite/Webpack"] },
+      { "subject": "可视化", "score": 4, "projects": ["AvatarX 3D", "数据大屏", "ECharts"] },
+      { "subject": "全栈", "score": 4, "projects": ["mini-mall", "LMCS", "舆情系统"] },
+      { "subject": "AI 应用", "score": 3, "projects": ["RAG 客服", "Spec-Driven", "Agent 工作流"] },
+      { "subject": "软技能", "score": 4, "projects": ["技术布道", "带团队", "跨部门协作"] }
+    ],
+    "tags": [
+      "TypeScript", "React", "Vue", "Next.js", "Vite", "Webpack",
+      "qiankun", "WebGL", "WebAssembly", "ECharts", "TailwindCSS",
+      "Node.js", "NestJS", "Go", "PostgreSQL", "Redis", "Docker",
+      "微信小程序", "RAG", "Spec-Driven Development"
+    ]
+  },
+  "experience": [
+    {
+      "id": "freelance",
+      "company": "自由职业 / 独立开发者",
+      "role": "全栈工程师 · 技术创业",
+      "period": "2024.02 - 至今",
+      "tags": ["fullstack", "ai"],
+      "highlights": [
+        "独立交付 mini-mall 电商系统（Next.js 16 + Docker 生产部署 + HTTPS）",
+        "主导 LMCS 微信小程序 MVP（Spec-Driven + Go/NestJS 双后端）",
+        "实践 AI 辅助工程（Cursor/SDD/Agent），运营技术公众号 Code小栈",
+        "创办幸惠超市并完成数字化进销存系统（Vue3 + 小程序）"
+      ],
+      "stack": ["Next.js", "Go", "NestJS", "Vue3", "Docker", "AI 辅助开发"]
+    },
+    {
+      "id": "xiangxin",
+      "company": "杭州相芯科技有限公司",
+      "role": "前端开发工程师",
+      "period": "2023.03 - 2024.01",
+      "tags": ["frontend"],
+      "highlights": [
+        "负责 AvatarX 虚拟数字人平台前端架构，支撑千万级数字资产管理",
+        "集成 WebAssembly + WebGL 实现高性能 3D 云渲染",
+        "全栈开发汽车口碑舆情系统 MVP（React + Egg.js）",
+        "推动 CI/CD、自动化测试与容器化部署标准化"
+      ],
+      "stack": ["Vue3", "TypeScript", "WebAssembly", "WebGL", "React", "UmiJS"]
+    },
+    {
+      "id": "mokua",
+      "company": "杭州魔筷科技有限公司",
+      "role": "前端架构师",
+      "period": "2020.03 - 2022.12",
+      "tags": ["frontend", "architect"],
+      "highlights": [
+        "基于 qiankun 实现微前端架构，支持 CRM/OMS/云仓多团队并行",
+        "主导组件库与设计系统，覆盖 80% 业务场景",
+        "页面首屏加载速度提升 40%，Lighthouse 指标全面达标",
+        "建立敏捷开发、Code Review、CI/CD 全流程规范"
+      ],
+      "stack": ["Vue3", "qiankun", "Pinia", "Storybook", "TypeScript"]
+    },
+    {
+      "id": "aigeng",
+      "company": "杭州艾耕科技有限公司",
+      "role": "前端开发工程师",
+      "period": "2018.06 - 2020.01",
+      "tags": ["frontend"],
+      "highlights": [
+        "负责知识图谱、智能写作等数据中台前端开发",
+        "自研富文本编辑器 eigen-editor 发布至公司 npm",
+        "推动前端 Docker 化部署，效率提升 60%",
+        "参与实时数据流可视化大屏开发"
+      ],
+      "stack": ["Vue2", "D3.js", "Docker", "Element UI"]
+    },
+    {
+      "id": "jianxue",
+      "company": "杭州简学科技有限公司",
+      "role": "前端开发工程师",
+      "period": "2015.08 - 2018.05",
+      "tags": ["frontend"],
+      "highlights": [
+        "负责摩课书院等教育平台三端开发，服务数十万用户",
+        "主导 React 技术栈调研与落地，团队效率提升 35%",
+        "建立前端自动化测试与 CI/CD 体系"
+      ],
+      "stack": ["React", "Redux", "Webpack", "Jest"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "mini-mall",
+      "name": "mini-mall 微型电商",
+      "role": "独立全栈开发者",
+      "period": "2025 - 2026",
+      "description": "面向商品展示与营销的微型电商系统，含秒杀、优惠券、订单、管理后台，已部署生产环境。",
+      "stack": ["Next.js 16", "React 19", "Drizzle ORM", "PostgreSQL", "Better Auth", "Docker", "Nginx"],
+      "highlights": [
+        "独立完成 Spec → Schema → API → UI → Docker 部署全链路",
+        "实现秒杀、优惠券、订单、管理后台等完整电商模块",
+        "生产部署至 ECS（HTTPS + 内存限制 + 健康检查）",
+        "集成 AI 商品推荐助手（RAG 客服 Demo）"
+      ],
+      "metrics": ["独立上线生产", "Docker Compose 部署", "HTTPS 正式证书"],
+      "links": { "demo": "https://mall.wxz.asia", "repo": "" }
+    },
+    {
+      "id": "lmcs",
+      "name": "LMCS 浪漫初识",
+      "role": "独立全栈开发者",
+      "period": "2025 - 2026",
+      "description": "公益免费同城实名相亲微信小程序 MVP，Spec-Driven 开发，含推荐、聊天、实名认证。",
+      "stack": ["微信小程序", "TypeScript", "Go/Gin", "NestJS", "PostgreSQL", "Redis", "WebSocket"],
+      "highlights": [
+        "PRD → SPEC → ARCHITECTURE 完整 Spec-Driven 文档体系",
+        "实现推荐算法、双向匹配聊天、实名认证、内容审核",
+        "Go + NestJS 双后端方案，Docker Compose 本地开发",
+        "公平使用限额与风控策略落地"
+      ],
+      "metrics": ["12 周 MVP 规划", "Spec-Driven", "双后端架构"],
+      "links": { "demo": "", "repo": "" }
+    },
+    {
+      "id": "avatarx",
+      "name": "AvatarX 虚拟数字人平台",
+      "role": "前端架构师",
+      "period": "2023.08 - 2024.01",
+      "description": "企业级虚拟数字人资产管理平台，支持云渲染、数字资产管理、权限系统。",
+      "stack": ["Vue3", "Pinia", "Vite", "TypeScript", "WebAssembly", "WebGL"],
+      "highlights": [
+        "设计前端架构，支持多角色权限与动态表单配置",
+        "集成 WASM + WebGL 实现高性能 3D 渲染",
+        "构建可配置数据可视化大屏"
+      ],
+      "metrics": ["服务数十家企业", "3D 性能优化 30%", "组件库覆盖 85%"],
+      "links": { "demo": "", "repo": "" }
+    },
+    {
+      "id": "mokua-admin",
+      "name": "魔筷中后台管理系统",
+      "role": "前端负责人",
+      "period": "2020.03 - 2022.12",
+      "description": "电商 SaaS 平台中后台，含 CRM、OMS、云仓等多个子系统。",
+      "stack": ["React", "qiankun", "Ant Design", "Redux", "Webpack"],
+      "highlights": [
+        "基于 qiankun 实现微前端，多团队并行开发",
+        "统一组件库与设计系统",
+        "权限系统与国际化方案"
+      ],
+      "metrics": ["组件库覆盖 80%", "首屏 < 2s", "重复开发减少 50%"],
+      "links": { "demo": "", "repo": "" }
+    }
+  ],
+  "education": {
+    "school": "江南大学",
+    "degree": "本科",
+    "major": "计算机科学与技术",
+    "period": "2011 - 2015"
+  },
+  "social": {
+    "github": "",
+    "blog": "Code小栈",
+    "juejin": "",
+    "zhihu": ""
+  }
+}

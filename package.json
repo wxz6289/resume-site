@@ -1,0 +1,28 @@
+{
+  "name": "resume-site",
+  "description": "王显朝交互式在线简历",
+  "private": false,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "framer-motion": "^12.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "recharts": "^2.15.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.0",
+    "vite": "^6.0.0"
+  },
+  "packageManager": "yarn@3.6.0+sha512.418e45c2268c4d6b69a28f3939084b5853d5f392c43c0b5588bd1995a96e328414ae4b7777a8980c64bad4328c52586ff879b289f98ae65372a55fa4d0ff70dd"
+}
