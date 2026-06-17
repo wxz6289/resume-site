@@ -15,12 +15,26 @@ export interface Stat {
   label: string;
   value: string;
   unit: string;
+  hint?: string;
+}
+
+export interface Expertise {
+  id: string;
+  title: string;
+  accent: string;
+  description: string;
+  points: string[];
 }
 
 export interface SkillRadar {
   subject: string;
   score: number;
   projects: string[];
+}
+
+export interface SkillCategory {
+  name: string;
+  items: string[];
 }
 
 export interface Experience {
@@ -30,6 +44,7 @@ export interface Experience {
   period: string;
   tags: string[];
   highlights: string[];
+  achievements?: string[];
   stack: string[];
 }
 
@@ -41,6 +56,7 @@ export interface Project {
   description: string;
   stack: string[];
   highlights: string[];
+  achievements?: string[];
   metrics: string[];
   links: { demo: string; repo: string };
 }
@@ -49,7 +65,12 @@ export interface ResumeData {
   profile: Profile;
   pdf: { url: string; filename: string };
   stats: Stat[];
-  skills: { radar: SkillRadar[]; tags: string[] };
+  expertise: Expertise[];
+  skills: {
+    radar: SkillRadar[];
+    categories: SkillCategory[];
+    tags: string[];
+  };
   experience: Experience[];
   projects: Project[];
   education: { school: string; degree: string; major: string; period: string };

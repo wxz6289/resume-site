@@ -16,16 +16,16 @@ export function SectionHeader({ index, title, subtitle }: Props) {
       viewport={{ once: true, margin: "-80px" }}
       variants={fadeUp}
     >
-      <p className="mb-2 font-mono text-xs tracking-[0.2em] text-accent uppercase">
-        {index}
-      </p>
-      <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">
-        {title}
-      </h2>
+      <div className="mb-3 flex items-center gap-3">
+        <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-rose-400/20 to-amber-400/20 font-mono text-xs text-rose-200 ring-1 ring-white/10">
+          {index}
+        </span>
+        <div className="section-line flex-1" />
+      </div>
+      <h2 className="text-2xl font-semibold tracking-tight text-white md:text-3xl">{title}</h2>
       {subtitle && (
-        <p className="mt-2 max-w-xl text-sm text-muted md:text-base">{subtitle}</p>
+        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted md:text-base">{subtitle}</p>
       )}
-      <div className="mt-4 h-px w-16 bg-gradient-to-r from-accent to-transparent" />
     </motion.div>
   );
 }

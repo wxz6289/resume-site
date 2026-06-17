@@ -1,40 +1,114 @@
 {
   "profile": {
     "name": "王显朝",
-    "title": "前端开发工程师 · AI 工程化",
-    "tagline": "11 年复杂系统架构 + AI 工程化落地 + 高性能前端",
+    "title": "前端开发工程师 · AI 工程化实践者",
+    "tagline": "11 年复杂系统架构设计 · AI 工程化落地 · 高性能前端与全栈交付",
     "phone": "15658001296",
     "email": "wxz6289@gmail.com",
     "location": "杭州",
     "experienceYears": "11",
     "salary": "20-26K",
-    "intents": ["前端开发工程师"],
-    "summary": "拥有 11 年软件开发经验，具备复杂系统架构设计与落地能力，长期专注于 AI 工程化、数据平台建设及高性能前端系统研发。主导构建舆情分析系统，实现 LLM 情感分析、自动摘要与主题聚类；熟悉 RAG 与 AI Agent 架构，具备微前端、WebGL/WASM 及全栈交付能力。"
+    "intents": ["前端开发工程师", "高级前端工程师", "AI 应用工程师"],
+    "summary": "拥有 11 年软件开发经验，具备复杂系统架构设计与落地能力，长期专注于 AI 工程化、数据平台建设及高性能前端研发。主导构建舆情分析系统，实现 LLM 情感分析、自动摘要与主题聚类；熟悉 RAG 与 AI Agent 架构，在微前端、WebGL/WASM、全栈交付等方向均有深度实践，能够从业务视角推动技术方案落地并持续优化系统性能与研发效率。"
   },
   "pdf": {
     "url": "/resume.pdf",
     "filename": "王显朝-前端开发工程师.pdf"
   },
   "stats": [
-    { "label": "从业年限", "value": "11", "unit": "年" },
-    { "label": "核心项目", "value": "7", "unit": "个" },
-    { "label": "技术栈", "value": "4", "unit": "套" },
-    { "label": "服务企业", "value": "数十", "unit": "家" }
+    { "label": "从业年限", "value": "11", "unit": "年", "hint": "2015 至今" },
+    { "label": "核心项目", "value": "7+", "unit": "个", "hint": "B 端 / AI / IoT" },
+    { "label": "服务企业", "value": "数十", "unit": "家", "hint": "含主机厂 / 运营商" },
+    { "label": "首屏性能提升", "value": "40", "unit": "%", "hint": "魔筷中后台" }
+  ],
+  "expertise": [
+    {
+      "id": "ai",
+      "title": "AI 工程能力",
+      "accent": "rose",
+      "description": "大模型在实际业务中的工程化落地，从数据采集到智能分析全链路。",
+      "points": [
+        "主导舆情分析系统：情感分析、自动摘要、主题聚类",
+        "熟悉 RAG 体系与 AI Agent 任务拆解、工具调用",
+        "ChatGPT / ASR 等技术可行性探索与 MVP 交付"
+      ]
+    },
+    {
+      "id": "frontend",
+      "title": "前端架构能力",
+      "accent": "amber",
+      "description": "大型中后台系统架构设计、微前端与工程化体系建设。",
+      "points": [
+        "精通 React / Vue / Next.js，qiankun 微前端多团队并行",
+        "组件库覆盖 80% 业务，Lighthouse / Web Vitals 全面达标",
+        "CI/CD、自动化测试、Storybook 全流程规范"
+      ]
+    },
+    {
+      "id": "fullstack",
+      "title": "全栈开发能力",
+      "accent": "sky",
+      "description": "前后端一体化交付，支撑高并发与复杂业务场景。",
+      "points": [
+        "Node.js（NestJS/Koa/Egg.js）+ Java Spring Boot 服务端",
+        "MySQL / Redis / MongoDB 建模与性能优化",
+        "微信小程序、Electron、物联网设备端全栈开发"
+      ]
+    },
+    {
+      "id": "viz",
+      "title": "高性能与可视化",
+      "accent": "violet",
+      "description": "复杂数据可视化、3D 交互与云渲染场景落地。",
+      "points": [
+        "WebGL / WebAssembly / Three.js 高性能 3D 渲染",
+        "ECharts / AntV / D3.js 数据大屏与交互分析",
+        "AvatarX 云渲染性能优化 30%，千万级资产管理"
+      ]
+    },
+    {
+      "id": "leadership",
+      "title": "技术影响力",
+      "accent": "emerald",
+      "description": "技术选型、架构决策与团队工程化能力提升。",
+      "points": [
+        "推动团队 React 技术栈落地，效率提升 35%",
+        "运营技术公众号 Code小栈，掘金 / 知乎技术分享",
+        "跨部门协作推动容器化、npm 私有源与组件库建设"
+      ]
+    }
   ],
   "skills": {
     "radar": [
       { "subject": "React 生态", "score": 5, "projects": ["魔筷中后台", "舆情系统", "开放课程平台"] },
-      { "subject": "工程化", "score": 5, "projects": ["qiankun 微前端", "CI/CD", "组件库"] },
+      { "subject": "工程化", "score": 5, "projects": ["qiankun", "CI/CD", "组件库 80% 覆盖"] },
       { "subject": "可视化", "score": 4, "projects": ["AvatarX 3D", "数据大屏", "Three.js"] },
-      { "subject": "全栈", "score": 5, "projects": ["LiteArm", "智能物业", "舆情系统"] },
-      { "subject": "AI 应用", "score": 4, "projects": ["LLM 舆情分析", "RAG", "Agent 工作流"] },
-      { "subject": "软技能", "score": 4, "projects": ["架构决策", "工程化推动", "跨部门协作"] }
+      { "subject": "全栈", "score": 5, "projects": ["LiteArm", "智能物业", "舆情 Pipeline"] },
+      { "subject": "AI 应用", "score": 4, "projects": ["LLM 舆情", "RAG", "Agent 工作流"] },
+      { "subject": "软技能", "score": 4, "projects": ["架构决策", "技术布道", "跨部门协作"] }
+    ],
+    "categories": [
+      {
+        "name": "前端",
+        "items": ["TypeScript", "React", "Vue", "Next.js", "Nuxt", "Vite", "Webpack", "qiankun", "TailwindCSS", "Ant Design"]
+      },
+      {
+        "name": "后端 & 数据",
+        "items": ["Node.js", "NestJS", "Koa", "Egg.js", "Spring Boot", "MySQL", "Redis", "MongoDB", "GraphQL", "WebSocket"]
+      },
+      {
+        "name": "可视化 & 跨端",
+        "items": ["ECharts", "AntV", "D3.js", "Three.js", "WebGL", "WebAssembly", "微信小程序", "Electron", "PWA"]
+      },
+      {
+        "name": "AI & 工程",
+        "items": ["LLM", "RAG", "AI Agent", "Prompt Engineering", "Docker", "CI/CD", "Cursor", "Spec-Driven"]
+      }
     ],
     "tags": [
       "TypeScript", "React", "Next.js", "Vue", "Node.js", "NestJS",
-      "Spring Boot", "qiankun", "WebGL", "WebAssembly", "Three.js",
-      "MySQL", "Redis", "MongoDB", "Docker", "CI/CD",
-      "LLM", "RAG", "AI Agent", "微信小程序"
+      "qiankun", "WebGL", "WebAssembly", "Three.js", "LLM", "RAG",
+      "Docker", "CI/CD", "微信小程序", "Electron", "ECharts"
     ]
   },
   "experience": [
@@ -45,12 +119,17 @@
       "period": "2025.09 - 至今",
       "tags": ["fullstack", "ai"],
       "highlights": [
-        "负责智能控制管家微信小程序开发，实现物联网设备远程控制与视频通信",
+        "负责智能控制管家微信小程序，连接人行闸机、道闸、视频终端等 IoT 设备",
         "实现机器人遥操音视频采集与推流，支持远程设备控制与实时交互",
-        "负责 LiteArm 机械臂上位机前后端开发，实现运动控制与轨迹记录回放",
-        "完成音视频通话与离线唤醒方案调研及落地"
+        "负责 LiteArm 机械臂上位机前后端，实现运动控制、轨迹记录与回放",
+        "完成音视频通话与离线唤醒方案调研及技术落地"
       ],
-      "stack": ["微信小程序", "音视频推流", "Electron", "Node.js", "物联网"]
+      "achievements": [
+        "LiteArm 上位机实现多种运动方式配置与轨迹回放",
+        "机器人遥操方案完成从采集到推流的全链路落地",
+        "智能物业小程序实现远程视频问询与闸机放行"
+      ],
+      "stack": ["微信小程序", "音视频推流", "Electron", "Node.js", "WebSocket", "物联网"]
     },
     {
       "id": "xiangxin",
@@ -60,12 +139,17 @@
       "tags": ["frontend", "architect", "ai"],
       "highlights": [
         "负责 AvatarX 虚拟数字人平台前端架构，支撑千万级数字资产管理",
-        "深度参与云渲染对接，利用 WebAssembly、WebGL 实现 3D 实时交互",
-        "主导江西移动虚拟数字人管理平台定制开发，支持多角色权限",
-        "全栈开发汽车口碑舆情系统，支持大数据爬虫与智能可视化分析",
+        "深度参与云渲染底层对接，WebAssembly + WebGL 实现 3D 实时交互",
+        "主导江西移动虚拟数字人管理平台定制，多角色权限与差异化功能",
+        "全栈开发汽车口碑舆情系统：爬虫、LLM 分析、可视化决策支持",
         "推动前后端分离、自动化测试、CI/CD、容器化部署标准化"
       ],
-      "stack": ["Vue3", "TypeScript", "WebAssembly", "WebGL", "React", "Egg.js"]
+      "achievements": [
+        "平台服务数十家企业，千万级数据资产稳定管理",
+        "3D 渲染性能优化 30%，推动组件库与代码规范标准化",
+        "独立完成汽车舆情系统 MVP，助力主机厂精准数据洞察"
+      ],
+      "stack": ["Vue3", "TypeScript", "WebAssembly", "WebGL", "React", "Egg.js", "ChatGPT"]
     },
     {
       "id": "mokua",
@@ -76,10 +160,15 @@
       "highlights": [
         "负责 CRM、OMS、云仓等中后台系统前端开发与架构优化",
         "主导组件库、业务中台、权限系统、国际化方案建设",
-        "推动页面首屏加载速度优化，Lighthouse、Web Vitals 指标全面达标",
-        "建立敏捷开发、自动化测试、CI/CD、代码审查全流程标准"
+        "基于 qiankun 微前端支持多子系统并行开发与独立部署",
+        "推动首屏加载优化，Lighthouse、Web Vitals 指标全面达标"
       ],
-      "stack": ["React", "qiankun", "Ant Design", "TypeScript", "Webpack"]
+      "achievements": [
+        "参与 3+ 子系统，组件库覆盖 80% 业务场景",
+        "页面首屏加载速度提升 40%，重复开发成本大幅降低",
+        "建立敏捷开发、Code Review、CI/CD 全流程规范"
+      ],
+      "stack": ["React", "qiankun", "Ant Design", "TypeScript", "Webpack", "Redux"]
     },
     {
       "id": "aigeng",
@@ -88,12 +177,17 @@
       "period": "2018.06 - 2020.02",
       "tags": ["frontend"],
       "highlights": [
-        "负责知识图谱、数据流、智能写作等数据中台系统前端开发",
-        "推动前端服务 Docker 化，提升部署效率与环境一致性",
-        "封装富文本编辑器 eigen-editor 发布至公司 npm",
-        "搭建公司内部 npm 源，推进公共组件库开发与复用"
+        "负责知识图谱、数据工作流、智能辅助选题写作等数据中台前端",
+        "推动前端服务 Docker 化，构建自动化部署工作流",
+        "自研富文本编辑器 eigen-editor 并发布至公司 npm",
+        "搭建公司内部 npm 源，推进公共组件库与通用函数复用"
       ],
-      "stack": ["Vue2", "Docker", "Element UI", "D3.js"]
+      "achievements": [
+        "eigen-editor 发布至 npm，多子系统复用",
+        "容器化部署效率提升 60%，环境一致性显著改善",
+        "完成知识图谱、数据流、智能写作三大子系统前端交付"
+      ],
+      "stack": ["Vue2", "Docker", "Element UI", "D3.js", "Jenkins"]
     },
     {
       "id": "jianxue",
@@ -103,9 +197,14 @@
       "tags": ["frontend"],
       "highlights": [
         "负责摩课书院、浙江省精品在线开放课程共享平台三端开发",
-        "主导 React 技术栈调研与落地，推动组件化与自动化测试体系建设",
-        "封装富文本、视频播放、题库等复杂功能组件",
-        "建立前端自动化测试、CI/CD 体系，服务数十万用户"
+        "主导 React 技术栈调研与落地，推动组件化与自动化测试体系",
+        "封装富文本、视频播放、题库（预览/答题/订正）等复杂组件",
+        "建立前端自动化测试与 CI/CD 体系，服务数十万用户"
+      ],
+      "achievements": [
+        "成功推动 React 技术栈落地，团队效率提升 35%",
+        "基于 CKeditor 封装编辑器并集成公式编辑",
+        "完成开放课程平台学生端、教师端、管理员端全功能"
       ],
       "stack": ["React", "Redux", "Webpack", "Jest", "CKeditor"]
     }
@@ -116,13 +215,14 @@
       "name": "LiteArm 机械臂上位机 & 机器人遥操",
       "role": "全栈工程师",
       "period": "2026.01 - 至今",
-      "description": "LiteArm 上位机运行于机械臂控制器，支持配置、状态展示、运动控制与轨迹记录回放；机器人遥操实现音视频采集推流与远程抓放操作。",
+      "description": "LiteArm 上位机运行于机械臂控制器，支持配置、状态展示、多种运动方式执行与轨迹记录回放；机器人遥操实现音视频采集推流与远程抓放操作。",
       "stack": ["Electron", "Node.js", "音视频推流", "WebSocket", "物联网"],
       "highlights": [
-        "实现机械臂运动配置、多种运动方式执行及轨迹记录回放",
-        "机器人遥操实现远程设备控制与实时交互能力",
-        "完成音视频采集推流方案落地"
+        "机械臂运动配置、执行与轨迹记录回放完整闭环",
+        "机器人端音视频采集并推流至遥操观看端",
+        "用户框选物品后机器人自动执行抓放操作"
       ],
+      "achievements": ["远程遥操实时交互", "轨迹回放", "推流方案落地"],
       "metrics": ["运动轨迹回放", "远程遥操", "实时推流"],
       "links": { "demo": "", "repo": "" }
     },
@@ -131,13 +231,14 @@
       "name": "智能物业控制管家",
       "role": "全栈开发工程师",
       "period": "2025.09 - 2025.12",
-      "description": "面向智慧物业与园区的物联网控制小程序，连接人行闸机、道闸、视频终端，实现远程控制、状态监测和视频通信。",
+      "description": "面向智慧物业与园区的物联网控制小程序，连接人行闸机、道闸、视频终端，实现远程控制、状态监测、视频通信与访客管理。",
       "stack": ["微信小程序", "物联网", "音视频通话", "远程控制"],
       "highlights": [
-        "物业管理人员可远程与访客视频问询，进行车闸或人行闸机放行",
-        "连接多种 IoT 设备，实现远程控制与状态监测",
-        "完成音视频通话与离线唤醒解决方案调研与落地"
+        "物业人员远程视频问询访客，一键车闸 / 人行闸机放行",
+        "多类型 IoT 设备统一接入与状态监测",
+        "音视频通话与离线唤醒方案调研与落地"
       ],
+      "achievements": ["IoT 多设备联动", "视频通信", "远程放行"],
       "metrics": ["IoT 多设备", "视频通信", "远程放行"],
       "links": { "demo": "", "repo": "" }
     },
@@ -146,13 +247,14 @@
       "name": "AI 舆情分析与决策系统",
       "role": "前后端开发",
       "period": "2025.01 - 2025.06",
-      "description": "面向汽车主机厂，整合抖音、B站、小红书等多平台数据，构建基于 AI 的舆情分析与决策支持平台。",
-      "stack": ["React", "Node.js", "LLM", "爬虫", "数据可视化"],
+      "description": "面向汽车主机厂，整合抖音、B站、小红书等多平台社媒数据，构建「采集 → 处理 → AI 分析 → 可视化」舆情决策支持平台。",
+      "stack": ["React", "Node.js", "LLM", "爬虫", "ASR", "数据可视化"],
       "highlights": [
-        "构建「数据采集 → 处理 → AI 分析 → 可视化展示」完整闭环",
-        "基于大模型实现情感分析、自动摘要、主题聚类",
-        "设计高可扩展数据处理 Pipeline，支持多品牌舆情分析"
+        "多平台爬虫体系：数据清洗、标准化、入库与索引优化",
+        "LLM 情感分析、自动摘要、主题聚类智能能力",
+        "多维度可视化分析平台，支持多品牌舆情对比"
       ],
+      "achievements": ["LLM 智能分析闭环", "多平台采集", "运营后台搭建"],
       "metrics": ["LLM 智能分析", "多平台采集", "数据驱动决策"],
       "links": { "demo": "", "repo": "" }
     },
@@ -161,13 +263,14 @@
       "name": "AvatarX 虚拟数字人平台",
       "role": "前端开发工程师",
       "period": "2023.08 - 2025.01",
-      "description": "企业级虚拟数字人资产管理平台，提供美术资源管理、云渲染、虚拟形象生成及语音交互服务。",
+      "description": "企业级虚拟数字人资产管理平台，覆盖美术资源管理、云渲染模版、虚拟形象生成及语音交互，支撑按需集成智能表现力虚拟人系统。",
       "stack": ["Vue3", "TypeScript", "WebAssembly", "WebGL", "Vite"],
       "highlights": [
-        "实现云渲染及云渲染模版管理功能",
-        "完成江西移动 AvatarX 平台定制化开发",
-        "集成 WebAssembly 与 WebGL，实现高性能 3D 渲染与实时交互"
+        "云渲染及云渲染模版管理，支撑按需渲染能力",
+        "江西移动 AvatarX 平台定制化开发与权限体系",
+        "WASM + WebGL 高性能 3D 渲染与实时交互"
       ],
+      "achievements": ["服务数十家企业", "性能优化 30%", "千万级资产"],
       "metrics": ["服务数十家企业", "千万级资产", "3D 实时交互"],
       "links": { "demo": "", "repo": "" }
     },
@@ -176,13 +279,14 @@
       "name": "魔筷中后台管理系统",
       "role": "前端开发",
       "period": "2020.03 - 2022.12",
-      "description": "电商 SaaS 平台中后台，包含 CRM、OMS、云仓等多个子系统。",
+      "description": "电商 SaaS 平台中后台，含 CRM、OMS、云仓等多子系统，基于 qiankun 微前端实现多团队并行开发与统一设计体系。",
       "stack": ["React", "qiankun", "Ant Design", "Redux", "Webpack"],
       "highlights": [
-        "完成 CRM 系统，实现组织架构动态配置与经纪人推品流程",
-        "完成商品订单管理，支持快手、抖音、视频号等店铺监控",
-        "完成魔筷云仓从服务商创建到仓配服务订购全流程"
+        "CRM：组织架构动态配置、日历日程、经纪人推品流程",
+        "OMS：商品订单管理，快手 / 抖音 / 视频号店铺监控",
+        "云仓：服务商创建 → 仓配资源配置 → 服务订购全流程"
       ],
+      "achievements": ["组件库 80% 覆盖", "首屏提升 40%", "3+ 子系统"],
       "metrics": ["组件库覆盖 80%", "首屏提升 40%", "3+ 子系统"],
       "links": { "demo": "", "repo": "" }
     },
@@ -191,13 +295,14 @@
       "name": "艾耕数据中台系统",
       "role": "前端开发工程师",
       "period": "2018.06 - 2020.01",
-      "description": "微服务架构数据中台，由知识图谱、数据工作流、智能辅助选题写作等子系统组成。",
-      "stack": ["Vue2", "Docker", "微服务", "Element UI"],
+      "description": "微服务架构数据中台，统一权限认证，含知识图谱、数据工作流、智能辅助选题写作等子系统。",
+      "stack": ["Vue2", "Docker", "微服务", "Element UI", "D3.js"],
       "highlights": [
-        "推广前后端分离与前端服务容器化部署",
-        "完成知识图谱、数据流、智能写作等子系统前端开发",
-        "封装 eigen-editor 编辑器包并发布至 npm"
+        "知识图谱、数据流管理、智能写作三大子系统前端",
+        "前后端分离 + 容器化部署工作流",
+        "eigen-editor 编辑器抽离发布 npm"
       ],
+      "achievements": ["npm 组件发布", "部署效率 +60%", "私有 npm 源"],
       "metrics": ["容器化部署", "npm 组件发布", "微服务中台"],
       "links": { "demo": "", "repo": "" }
     },
@@ -206,13 +311,14 @@
       "name": "高等学校在线开放课程共享平台",
       "role": "前端开发工程师",
       "period": "2015.08 - 2018.05",
-      "description": "浙江省高校高等教育课程共享云大学平台，含学生端、教师端和管理员端。",
-      "stack": ["React", "Redux", "CKeditor", "Webpack"],
+      "description": "浙江省教育厅云大学平台，学生端（学习/作业/测验）、教师端（课程/资源/考试）、管理员端（审核/统计）三端完整功能。",
+      "stack": ["React", "Redux", "CKeditor", "Webpack", "Jest"],
       "highlights": [
-        "实现 React 技术栈选型与三端功能开发",
-        "基于 CKeditor 封装富文本编辑器并集成公式编辑器",
-        "开发多种题型组件，提供预览、答题、订正等功能"
+        "React 技术栈选型与三端架构落地",
+        "CKeditor 富文本 + 公式编辑器封装",
+        "多题型组件：预览、答题、订正、错题收集"
       ],
+      "achievements": ["数十万用户", "React 落地", "自动化测试体系"],
       "metrics": ["三端开发", "数十万用户", "React 技术落地"],
       "links": { "demo": "", "repo": "" }
     }
@@ -225,7 +331,7 @@
   },
   "social": {
     "github": "https://github.com/wxz6289",
-    "blog": "",
+    "blog": "Code小栈",
     "juejin": "",
     "zhihu": ""
   }
